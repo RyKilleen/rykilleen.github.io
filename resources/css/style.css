@@ -1,5 +1,6 @@
 body {
 	background-color: rgb(167, 255, 137);
+	overflow: hidden;
 }
 
 .greeting {
