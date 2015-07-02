@@ -58,7 +58,7 @@ gulp.task('jshintIndividuals', function() {
 
 gulp.task('libs', function() {
   // Pay attention to the resources/js folder for development js
-  return gulp.src(['resources/js/libs/jquery1.11.2.min.js', 'resources/js/libs/*.js'])
+  return gulp.src(['resources/js/libs/*.js'])
     // handles errors as they come up
     .pipe(plugins.plumber({
       errorHandler: onError
@@ -66,7 +66,7 @@ gulp.task('libs', function() {
     // concatenates into a file called all.js
     .pipe(plugins.concat('libs.js'))
     // Puts it in the /js folder
-    .pipe(gulp.dest('./js'))
+    .pipe(gulp.dest('./assets/js'))
     .pipe(plugins.savefile())
     //Rename for minifying
     .pipe(plugins.rename('libs.min.js'))
@@ -90,7 +90,7 @@ gulp.task('scriptsMinify', function() {
     // concatenates into a file called all.js
     .pipe(plugins.concat('all.js'))
     // Puts it in the /js folder
-    .pipe(gulp.dest('./js'))
+    .pipe(gulp.dest('./assets/js'))
     .pipe(plugins.savefile())
     //Rename for minifying
     .pipe(plugins.rename('all.min.js'))
@@ -115,7 +115,7 @@ gulp.task('styles', function() {
     // Uses compass with the following parameters
     .pipe(plugins.compass({
       config_file: './config.rb',
-      css: './css',
+      css: './assets/css',
       sass: 'resources/scss',
       outputStyle: ':compressed'
     }))
@@ -124,7 +124,7 @@ gulp.task('styles', function() {
         cascade: false
     }))
     // The destination file for the end css.
-    .pipe(gulp.dest('./css'));
+    .pipe(gulp.dest('./assets/css'));
     // Gives a message when it's good to go
     //.pipe(plugins.notify({ message: 'Styles task complete'}));
 });
