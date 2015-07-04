@@ -4,16 +4,20 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/all.css">
 	
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.1/angular.min.js"></script>
+
 	<script src="assets/js/libs.min.js"></script>
+	<script src="assets/js/app.js"></script>
+	<script src="assets/js/mainController.js"></script>
 </head>
-<body>
-	<div class="container" ng-app>
+<body ng-app="myApp">
+	<div class="container" ng-controller="MainController">
 		<div class="greeting">
 			<h1 class="greeting__message">Coming..</h1><span class="last-period">.</span>
+			<p>{{ title }}</p>
 		</div>
 	</div>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-	<script src="assets/js/all.js"></script>
+	
 </body>
 </html>

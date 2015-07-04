@@ -20,40 +20,23 @@ gulp.task('default', ['buildSequence', 'watch']);
 //Allows for sync and async functions. Anything within [] runs async
 gulp.task('buildSequence', function() {
   console.clear();
-  runSequence('jshintIndividuals', ['scriptsMinify', 'libs', 'styles'], 'jshintAll');
+  runSequence(['scripts', 'libs', 'styles']);
 });
 
-gulp.task('jshintAll', function() {
-  return gulp.src(['resources/js/base.js','js/all.js'])
-
-    .pipe(plugins.plumber({
-      errorHandler: onError
-    }))
-
-    .pipe(plugins.concat('baseAndAll.js'))
-
-    .pipe(plugins.jshint())
-
-    .pipe(plugins.jshint.reporter('default'));
-});
-
-// Define a task jshint
-gulp.task('jshintIndividuals', function() {
-
-  //Clear the Console
-
+gulp.task('scripts', function() {
   // Pay attention to the resources/js folder for development js
-  return gulp.src(['resources/js/**/*.js', '!resources/js/libs/*.js'])
+  return gulp.src(['resources/js/*.js', 'resources/js/angular/*.js'])
     // handles errors as they come up
     .pipe(plugins.plumber({
       errorHandler: onError
     }))
-    // Hints at errors
-    .pipe(plugins.jshint())
-    // Uses a default handler for reporting messages
-    .pipe(plugins.jshint.reporter('default'));
-    // Gives a message when it's good to go
-    //.pipe(plugins.notify({message: 'JS Hinting Task complete'}));
+    // Puts it in the /js folder
+    .pipe(gulp.dest('./assets/js'))
+    .pipe(plugins.savefile())
+    // Removes any debuggers;
+    .pipe(plugins.stripDebug())
+    .pipe(plugins.savefile());
+
 });
 
 gulp.task('libs', function() {
