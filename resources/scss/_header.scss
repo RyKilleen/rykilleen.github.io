@@ -6,4 +6,7 @@
 
 .to-hide {
 	overflow: hidden;
+	transition: width 0.3s ease;	
+	display: inline-block;
+	vertical-align: bottom;
 }

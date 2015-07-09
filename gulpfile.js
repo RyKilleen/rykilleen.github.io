@@ -34,7 +34,7 @@ gulp.task('scripts', function() {
     .pipe(gulp.dest('./assets/js'))
     .pipe(plugins.savefile())
     // Removes any debuggers;
-    .pipe(plugins.stripDebug())
+    // .pipe(plugins.stripDebug())
     .pipe(plugins.savefile());
 
 });
@@ -54,7 +54,7 @@ gulp.task('libs', function() {
     //Rename for minifying
     .pipe(plugins.rename('libs.min.js'))
     // Removes any debuggers;
-    .pipe(plugins.stripDebug())
+    // .pipe(plugins.stripDebug())
     // Compresses javascript
     .pipe(plugins.uglify())
     .pipe(plugins.savefile());
