@@ -2,7 +2,8 @@
 <head>
 	<link href='https://fonts.googleapis.com/css?family=Raleway:900' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="assets/css/all.css">
-	
+	<link href='http://fonts.googleapis.com/css?family=Roboto:900,400' rel='stylesheet' type='text/css'>
+
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.1/angular.min.js"></script>
 
 	<script src="assets/js/libs.min.js"></script>
@@ -11,13 +12,13 @@
 </head>
 <body ng-app="myApp">
 	<div class="container" ng-controller="MainController">
+		<header>
+			<div class="header-logo">R<span class="to-hide">yan</span> K<span class="to-hide">illeen</span></div>
+		</header>
 		<div class="greeting">
 			<h1 class="greeting__message">Coming..</h1><span class="last-period">.</span>
 			<p>{{ title }}</p>
 		</div>
-	</div>
-
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-	
+	</div>	
 </body>
 </html>

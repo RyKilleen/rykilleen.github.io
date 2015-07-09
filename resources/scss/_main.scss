@@ -1,0 +1,33 @@
+html, body {
+	width: 100%;
+	overflow: hidden;
+}
+
+html {
+	font-size: 1rem;
+}
+
+body {
+	background-color: $white;
+	overflow: hidden;
+}
+
+.greeting {
+	position: absolute;
+	text-align: center;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 100%;
+}
+
+.greeting__message, .last-period {
+	color: $black;
+	font-family: 'Raleway', sans-serif;
+	text-transform:  uppercase;
+	font-size: 2rem;
+	display: inline-block;
+}
+
+.last-period.hide {
+	opacity: 0;
+}
