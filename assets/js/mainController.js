@@ -7,7 +7,6 @@ app.controller('MainController', ['$scope', '$log', function($scope, $log) {
   	$scope.header.logo.hovered = false;
 
   	$scope.header.hideHeader = function() {
-  		var s = $scope;
 
   		if ($scope.header.logo.hovered === false) {
   			$scope.header.toHides.each(function(){
@@ -17,7 +16,8 @@ app.controller('MainController', ['$scope', '$log', function($scope, $log) {
   	};
 
   	$scope.header.showHeader = function() {
-  		s.header.toHides.each(function(){
+
+  		$scope.header.toHides.each(function(){
 			this.style.width = $(this).data('origWidth');
 		});
   	}
