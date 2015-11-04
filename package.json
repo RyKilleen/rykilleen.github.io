@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "angular": "*",
     "gulp-jshint": "*",
     "gulp-concat": "*",
     "gulp-compass": "*",
