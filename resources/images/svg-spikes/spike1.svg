@@ -3,15 +3,16 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="800px"
 	 height="600px" viewBox="0 0 800 600" enable-background="new 0 0 800 600" xml:space="preserve">
-<g id="shape">
-	<path stroke="#000000" stroke-miterlimit="10" d="M355.817,43.561c0,0,61.482,135.46-163.957,196.865
+
+	<defs>
+		<clipPath id="spike1-mask">
+			<path stroke="#000000" stroke-miterlimit="10" d="M355.817,43.561c0,0,61.482,135.46-163.957,196.865
 		c-90.763,24.721-155.017,63.2-200.89,100.242l-15.917,214.023c45.034-66.203,90.044-172.511,264.872-276.151
 		C441.598,158.987,355.817,43.561,355.817,43.561z"/>
-	<path stroke="#000000" stroke-miterlimit="10" d="M0,499.961"/>
-	<path stroke="#000000" stroke-miterlimit="10" d="M0,285.345"/>
-</g>
-<g id="path" display="none">
-	<path display="inline" fill="none" stroke="#FF1F1F" stroke-width="133" stroke-miterlimit="10" d="M332-49c0,0,59,51-15,160
+		</clipPath>
+	</defs>
+
+	<path clip-path="url(#spike1-mask)" display="inline" fill="none" stroke="#FF1F1F" stroke-width="133" stroke-miterlimit="10" d="M332-49c0,0,59,51-15,160
 		S161.941,177.841,32,346c-56.624,73.277-99,139-128,198"/>
-</g>
+
 </svg>

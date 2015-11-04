@@ -7,6 +7,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.1/angular.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
 
 	<script src="assets/js/app.js"></script>
 	<script src="assets/js/mainController.js"></script>
@@ -24,22 +25,20 @@
 			
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="800px"
 	 height="600px" viewBox="0 0 800 600" enable-background="new 0 0 800 600" xml:space="preserve">
-	 <defs>
-	 	<clipPath id="spike1-mask">
-	 		<g id="shape" >
-				<path stroke="#000000" stroke-miterlimit="10" d="M0,499.961C39.175,430.6,120.123,306.024,243.413,204.926
-					C424.701,56.27,341.308-38,341.308-38s71.609,130.528-148.656,208.481C103.973,201.866,42.181,245.004,0,285.345"/>
-				<path stroke="#000000" stroke-miterlimit="10" d="M0,499.961"/>
-				<path stroke="#000000" stroke-miterlimit="10" d="M0,285.345"/>
-			</g>
-	 	</clipPath>
-	 </defs>
-	 <g id="path" clip-path="url(#spike1-mask)">
-		<path fill="none" stroke="#FF1F1F" stroke-width="133" stroke-miterlimit="10" d="M332-49c0,0,59,51-15,160S161.941,177.841,32,346
-	c-56.624,73.277-99,139-128,198"/>
-	</g>
-		
+
+	<defs>
+		<clipPath id="spike1-mask">
+			<path stroke="#000000" stroke-miterlimit="10" d="M355.817,43.561c0,0,61.482,135.46-163.957,196.865
+		c-90.763,24.721-155.017,63.2-200.89,100.242l-15.917,214.023c45.034-66.203,90.044-172.511,264.872-276.151
+		C441.598,158.987,355.817,43.561,355.817,43.561z"/>
+		</clipPath>
+	</defs>
+
+	<path clip-path="url(#spike1-mask)" display="inline" fill="none" stroke="#FF1F1F" stroke-width="133" stroke-miterlimit="10" d="M332-49c0,0,59,51-15,160
+		S161.941,177.841,32,346c-56.624,73.277-99,139-128,198"/>
+
 </svg>
+
 
 		</div>
 	</div>	

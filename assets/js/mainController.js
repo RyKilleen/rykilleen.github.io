@@ -15,6 +15,17 @@ app.controller('MainController', ['$scope', '$log', function($scope, $log) {
   		}  		
   	};
 
+    $scope.setSpikes = function() {
+      var spikes = $('path:not(defs path)');
+
+      spikes.each(function(i, e) {
+          e.style.strokeDasharray = e.style.strokeDashoffset = e.getTotalLength();
+      });
+    }
+    $scope.showSpikes = function() {
+      
+    };
+
   	$scope.header.showHeader = function() {
 
   		$scope.header.toHides.each(function(){
@@ -29,23 +40,24 @@ app.controller('MainController', ['$scope', '$log', function($scope, $log) {
   		var s = $scope;
 
   		// Get the true width of the displayed elements and place it into data
- 		s.header.toHides.each(function(){
- 			$(this).data('origWidth' , this.offsetWidth); 			
- 			this.style.width = this.offsetWidth;
- 		});
+   		s.header.toHides.each(function(){
+   			$(this).data('origWidth' , this.offsetWidth); 			
+   			this.style.width = this.offsetWidth;
+   		});
 
- 		setTimeout(function() {
- 			$scope.header.hideHeader();
- 		}, 1000, $scope);
+   		setTimeout(function() {
+   			$scope.header.hideHeader();
+   		}, 5000, $scope);
 
+      $scope.setSpikes();
 
- 		$scope.header.logo.on('mouseenter', function() {
+ 		s.header.logo.on('mouseenter', function() {
 
  			$scope.header.logo.hovered = true;
  			$scope.header.showHeader();
  		});
 
- 		$scope.header.logo.on('mouseleave', function() {
+ 		s.header.logo.on('mouseleave', function() {
 
  			$scope.header.logo.hovered = false;
 
