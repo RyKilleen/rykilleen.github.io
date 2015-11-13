@@ -23,6 +23,7 @@ $scope.header.showHeader = function() {
 }
 
 
+
 $scope.spikes = {
   pathsToAnimate : $('path:not(defs path)'),
   setSpikes : function() {
@@ -44,6 +45,10 @@ $scope.spikes = {
     ]);
   }
 } 
+
+test = {};
+test.set = $scope.spikes.setSpikes;
+test.play = $scope.spikes.playSpikes;
 
 
 angular.element(document).ready(function () {

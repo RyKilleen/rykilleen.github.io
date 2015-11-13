@@ -1,6 +1,7 @@
 html, body {
 	width: 100%;
 	overflow: hidden;
+	color: $white;
 }
 
 html {
@@ -10,6 +11,7 @@ html {
 body {
 	background-color: $white;
 	overflow: hidden;
+	background-image: url('../images/pattern.png');
 }
 
 .greeting {
@@ -21,7 +23,7 @@ body {
 }
 
 .greeting__message, .last-period {
-	color: $black;
+	color: $white;
 	font-family: 'Raleway', sans-serif;
 	text-transform:  uppercase;
 	font-size: 2rem;
@@ -44,7 +46,7 @@ body {
 		height: 100%;
 
 		path {
-			stroke: rgb(200, 229, 255);
+			stroke: rgb(187, 230, 255);
 		}
 	}	
 }
