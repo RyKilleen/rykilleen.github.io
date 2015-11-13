@@ -1,71 +1,79 @@
 app.controller('MainController', ['$scope', '$log', function($scope, $log) { 
-  	
-  	$scope.header = $('header');
-  	$scope.header.toHides = $scope.header.find('.to-hide');
-  	$scope.header.logo = $('.header-logo');
 
-  	$scope.header.logo.hovered = false;
+ $scope.header = $('header');
+ $scope.header.toHides = $scope.header.find('.to-hide');
+ $scope.header.logo = $('.header-logo');
 
-  	$scope.header.hideHeader = function() {
+ $scope.header.logo.hovered = false;
 
-  		if ($scope.header.logo.hovered === false) {
-  			$scope.header.toHides.each(function(){
-				this.style.width = "0px";
-			})	
-  		}  		
-  	};
+ $scope.header.hideHeader = function() {
 
-    $scope.setSpikes = function() {
-      var spikes = $('path:not(defs path)');
+  if ($scope.header.logo.hovered === false) {
+   $scope.header.toHides.each(function(){
+    this.style.width = "0px";
+  })	
+ }  		
+};
 
-      spikes.each(function(i, e) {
-          e.style.strokeDasharray = e.style.strokeDashoffset = e.getTotalLength();
-      });
-    }
-    $scope.showSpikes = function() {
-      
-    };
+$scope.header.showHeader = function() {
 
-  	$scope.header.showHeader = function() {
-
-  		$scope.header.toHides.each(function(){
-			this.style.width = $(this).data('origWidth');
-		});
-  	}
+  $scope.header.toHides.each(function(){
+   this.style.width = $(this).data('origWidth');
+ });
+}
 
 
+$scope.spikes = {
+  pathsToAnimate : $('path:not(defs path)'),
+  setSpikes : function() {
+    var paths = $scope.spikes.pathsToAnimate;
+
+    paths.each(function(i, e) {
+      e.style.strokeDashoffset = -e.getTotalLength();
+      e.style.strokeDasharray = e.getTotalLength()
+    });
+  },
 
 
-  	angular.element(document).ready(function () {
-  		var s = $scope;
+  playSpikes : function() {
+    var timeline = new TimelineMax();
+    var paths = $scope.spikes.pathsToAnimate;
 
-  		// Get the true width of the displayed elements and place it into data
-   		s.header.toHides.each(function(){
-   			$(this).data('origWidth' , this.offsetWidth); 			
-   			this.style.width = this.offsetWidth;
-   		});
+    timeline.add([
+        TweenLite.to(paths.eq(0), 2, {strokeDashoffset: 0, ease: Expo.easeOut, delay: 0.0})
+    ]);
+  }
+} 
 
-   		setTimeout(function() {
-   			$scope.header.hideHeader();
-   		}, 5000, $scope);
 
-      $scope.setSpikes();
+angular.element(document).ready(function () {
+  var s = $scope;
 
- 		s.header.logo.on('mouseenter', function() {
+    // Get the true width of the displayed elements and place it into data
+    s.header.toHides.each(function(){
+      $(this).data('origWidth' , this.offsetWidth); 			
+      this.style.width = this.offsetWidth;
+    });
 
- 			$scope.header.logo.hovered = true;
- 			$scope.header.showHeader();
- 		});
+    setTimeout(function() {
+      $scope.header.hideHeader();
+      $scope.spikes.playSpikes();
+    }, 1000, $scope);
 
- 		s.header.logo.on('mouseleave', function() {
+    s.spikes.setSpikes()
+    s.header.logo.on('mouseenter', function() {
+      $scope.header.logo.hovered = true;
+      $scope.header.showHeader();
+    });
 
- 			$scope.header.logo.hovered = false;
+    $scope.header.logo.on('mouseleave', function() {
 
- 			setTimeout(function() {
-	 			$scope.header.hideHeader();
-	 		}, 1000, $scope);
- 		})
+      $scope.header.logo.hovered = false;
 
-    }, $log, $scope);
+      setTimeout(function() {
+        $scope.header.hideHeader();
+      }, 1000, $scope);
+    })
+  }, $log, $scope);
 
 }]);
