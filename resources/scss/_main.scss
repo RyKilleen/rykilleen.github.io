@@ -5,7 +5,13 @@ html, body {
 }
 
 html {
-	font-size: 1rem;
+	font-size: 2rem;
+}
+
+@media screen and (min-width: 1025px) {
+  html {
+    font-size: 1rem;
+  }
 }
 
 body {
@@ -52,8 +58,7 @@ p, a {
 
 
     .quandry {
-      font-family: 'Raleway', serif;
-      
+      font-family: 'Raleway', serif;      
     text-transform: uppercase;
     }
     
@@ -64,7 +69,7 @@ p, a {
 
     .link-box {
       text-align: left;
-      max-width: 400px;
+      max-width: 681px;
       margin: 0 auto;
     }
 
