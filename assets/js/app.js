@@ -1,2 +1,0 @@
-console.log("%cHello there!", "color:orange; background:blue; font-size: 16pt")
-console.log("Please excuse the mess in here. It seems someone else's projects are always calling, the cobbler's children always go barefoot.")
