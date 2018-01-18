@@ -13,6 +13,7 @@ export default class MainLayout extends React.Component {
       .replace(pathPrefix, "")
       .replace("/", "");
     let title = "";
+
     if (currentPath === "") {
       title = "Home";
     } else if (currentPath === "tags/") {
@@ -46,7 +47,11 @@ export default class MainLayout extends React.Component {
           <title>{`${config.siteTitle} |  ${this.getLocalTitle()}`}</title>
           <meta name="description" content={config.siteDescription} />
         </Helmet>
-        {children()}
+        <nav>Nav</nav>
+        <main>
+          {children()}
+        </main>
+        <footer>Footer</footer>
       </div>
     );
   }
