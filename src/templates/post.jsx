@@ -28,6 +28,11 @@ export default class PostTemplate extends React.Component {
         <SEO postPath={slug} postNode={postNode} postSEO />
         <div>
           <h1>{post.title}</h1>
+          <time>Originally Posted: {post.date}</time>
+
+          {post.lastUpdated &&
+            <time>Last Updated: {post.lastUpdated}</time>
+          }
           <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
           <div className="post-meta">
             <PostTags tags={post.tags} />
@@ -52,6 +57,7 @@ export const pageQuery = graphql`
         title
         cover
         date
+        lastUpdated
         category
         tags
       }

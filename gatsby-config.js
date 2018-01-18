@@ -141,6 +141,7 @@ module.exports = {
                     frontmatter {
                       title
                       cover
+                      lastUpdated
                       date
                       category
                       tags

@@ -2,7 +2,8 @@
 title: "Big Test"
 cover: "https://unsplash.it/400/300/?random?BigTest"
 category: "moar"
-date: "01/03/2018"
+date: "2018-01-03"
+lastUpdated: "2018-01-17"
 slug: "Big-Sample_Test"
 tags:
     - test
