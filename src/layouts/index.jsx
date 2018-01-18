@@ -5,8 +5,6 @@ import Navigation from "../components/Navigation/Navigation";
 import Footer from "../components/Footer/Footer";
 import "./index.css";
 
-
-
 export default class MainLayout extends React.Component {
   getLocalTitle() {
     function capitalize(string) {
@@ -46,12 +44,14 @@ export default class MainLayout extends React.Component {
   render() {
     const { children } = this.props;
     return (
-      <div>
+      <div className="site">
         <Helmet>
           <title>{`${config.siteTitle} |  ${this.getLocalTitle()}`}</title>
           <meta name="description" content={config.siteDescription} />
         </Helmet>
-        <Navigation />
+        <header>
+          <Navigation />
+        </header>        
         <main>
           {children()}
         </main>

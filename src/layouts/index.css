@@ -8,5 +8,19 @@ html {
 
 body {
     margin: 0;
-    padding: 20px;
+    padding: 0;
+}
+
+.site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;  
+}
+
+footer {
+
 }
