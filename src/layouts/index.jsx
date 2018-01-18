@@ -1,7 +1,11 @@
 import React from "react";
 import Helmet from "react-helmet";
 import config from "../../data/SiteConfig";
+import Navigation from "../components/Navigation/Navigation";
+import Footer from "../components/Footer/Footer";
 import "./index.css";
+
+
 
 export default class MainLayout extends React.Component {
   getLocalTitle() {
@@ -47,11 +51,11 @@ export default class MainLayout extends React.Component {
           <title>{`${config.siteTitle} |  ${this.getLocalTitle()}`}</title>
           <meta name="description" content={config.siteDescription} />
         </Helmet>
-        <nav>Nav</nav>
+        <Navigation />
         <main>
           {children()}
         </main>
-        <footer>Footer</footer>
+        <Footer config={config} />
       </div>
     );
   }

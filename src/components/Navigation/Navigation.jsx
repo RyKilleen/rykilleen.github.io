@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 const propTypes = {
@@ -16,6 +16,9 @@ class Navigation extends Component {
         this.state = {
             structure : this.props.structure
         }
+    }
+    render() {
+        return (<h1>Nav</h1>)
     }
 }
 
