@@ -8,8 +8,7 @@ class BlogLogo extends Component {
     if (logo) {
       return (
         <Link className="blog-logo" to={url || "/"}>
-          {/* style={{ boxShadow: "none" }}> */}
-          <img src={logo} alt={title} />
+          Home
         </Link>
       );
     }
