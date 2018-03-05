@@ -60,19 +60,21 @@ div.page-template .post-title {
     font-family: "Open Sans", sans-serif;
     font-size: 1.5rem;
     line-height: 2.2rem;
-    color: #9eabb3;
+    
 }
 
+.post-meta,
 .post-meta a {
-    color: #9eabb3;
-    text-decoration: none;
+    color: #527A52;
 }
 
 .post-meta a:hover {
     color: #9eabb3;
     text-decoration: underline;
 }
-
+.post-date {
+    font-weight: 900;
+}
 .post-template .post-meta,
 .page-template .post-meta {
     margin: 0;
