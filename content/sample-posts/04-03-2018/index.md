@@ -15,7 +15,7 @@ I'm finally getting this personal site into a functional space, to post my findi
 
 1. It uses Javascript and React, allowing for a pretty cool experience for a static site (in languages and frameworks I'm comfortable with!)
 2. It uses GraphQL for defining schema and getting data, to do some really awesome compile-time magic and allow for dynamic data as well!
-3. It was easy to get up and goig, old sport!
+3. It was easy to get up and going, old sport!
 
 ## The Enemy of Done
 
