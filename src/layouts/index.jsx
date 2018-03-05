@@ -1,8 +1,6 @@
 import React from "react";
 import Helmet from "react-helmet";
 import config from "../../data/SiteConfig";
-import Navigation from "../components/Navigation/Navigation";
-import Footer from "../components/Footer/Footer";
 import "./index.css";
 
 export default class MainLayout extends React.Component {
@@ -15,7 +13,6 @@ export default class MainLayout extends React.Component {
       .replace(pathPrefix, "")
       .replace("/", "");
     let title = "";
-
     if (currentPath === "") {
       title = "Home";
     } else if (currentPath === "tags/") {
@@ -24,15 +21,15 @@ export default class MainLayout extends React.Component {
       title = "Categories";
     } else if (currentPath === "about/") {
       title = "About";
-    } else if (currentPath.indexOf("posts")) {
+    } else if (currentPath.includes("posts")) {
       title = "Article";
-    } else if (currentPath.indexOf("tags/")) {
+    } else if (currentPath.includes("tags/")) {
       const tag = currentPath
         .replace("tags/", "")
         .replace("/", "")
         .replace("-", " ");
       title = `Tagged in ${capitalize(tag)}`;
-    } else if (currentPath.indexOf("categories/")) {
+    } else if (currentPath.includes("categories/")) {
       const category = currentPath
         .replace("categories/", "")
         .replace("/", "")
@@ -44,18 +41,12 @@ export default class MainLayout extends React.Component {
   render() {
     const { children } = this.props;
     return (
-      <div className="site">
+      <div>
         <Helmet>
           <title>{`${config.siteTitle} |  ${this.getLocalTitle()}`}</title>
           <meta name="description" content={config.siteDescription} />
         </Helmet>
-        <header>
-          <Navigation />
-        </header>        
-        <main>
-          {children()}
-        </main>
-        <Footer config={config} />
+        {children()}
       </div>
     );
   }
