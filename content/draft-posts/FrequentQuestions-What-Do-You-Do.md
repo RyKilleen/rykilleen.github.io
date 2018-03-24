@@ -6,7 +6,7 @@ In my day-to-day, at meetups, with clients, whether they're other developers or 
 
 ## So... What do you do, exactly?
 
-As with most questions, the answer is: it depends. The position itself differs widely betwneen employers across the industery, so I'll attempt to detail some of the nuances here.
+As with most questions, the answer is: it depends. The position itself differs widely betwneen employers across the industry, so I'll attempt to detail some of the nuances here.
 
 
 1. Build the part you interact with
