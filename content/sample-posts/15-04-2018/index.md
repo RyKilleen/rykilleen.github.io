@@ -1,7 +1,7 @@
 ---
 title: "Frequent Questions: What Does a Front-End / UI Developer Do?"
 cover: "https://unsplash.it/1152/300/?random?BirchintheRoses"
-date: "03/04/2018"
+date: "04/15/2018"
 category: "career"
 author: "ryan"
 tags:
