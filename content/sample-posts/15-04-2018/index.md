@@ -9,7 +9,6 @@ tags:
     - Platform
     - Frequent Questions
 ---
-# Frequent Questions Series: What Does a Front-End / UI Developer Do?
 
 #### On This Series
 
