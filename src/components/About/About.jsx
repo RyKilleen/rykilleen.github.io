@@ -6,8 +6,10 @@ class About extends Component {
     return (
       <div className="about">
         <h1>
-          Edit About component or pages/about.jsx to include your information.
+          About Ryan
         </h1>
+        <p>Ryan is a Software Developer at <a href="https://www.thinkcompany.com">Think Company</a></p>
+        <p>More Coming soon!</p>
       </div>
     );
   }
