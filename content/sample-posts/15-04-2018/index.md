@@ -50,4 +50,8 @@ Sometimes knowing what you don't have to do is half the battle, and in the end R
 
 ## That's all for now
 
-Having started this venture, I'll be keeping an eye out for the questions I get all the time and trying to keep on top of them here! Future articles will be linked above.
+Having started this venture, I'll be keeping an eye out for the questions I get all the time and trying to keep on top of them here!
+
+Have any Front-end focused questions plaguing you? Reach out to me on Twitter [@deathbypapercut](https://twitter.com/deathbypapercut) and I'll compile them into the next post!
+
+Future articles will be linked above.
