@@ -7,7 +7,6 @@ module.exports = {
   siteLogo:
     "https://haysclark.github.io/gatsby-starter-casper/logos/logo-1024.png", // Logo used for SEO and manifest. e.g. "/logos/logo-1024.png",
   siteUrl: "https://www.ryankilleen.com", // Domain of your website without pathPrefix.
-  pathPrefix: "/blog", // Prefixes all links. For cases when deployed to example.github.io/gatsby-starter-casper/.
   siteDescription:
     "A UI Developer's musing on web engineering, working together, technology, and getting through the day.", // Website description used for RSS feeds/meta description tag.
   siteCover:
