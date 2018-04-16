@@ -1,17 +1,17 @@
 const config = require("./data/SiteConfig");
 
-const pathPrefix = config.pathPrefix === "/" ? "" : config.pathPrefix;
+const constPathPrefix = config.pathPrefix === "" ? "/" : config.pathPrefix;
 
 module.exports = {
-  pathPrefix: config.pathPrefix,
+  pathPrefix: constPathPrefix,
   siteMetadata: {
-    siteUrl: config.siteUrl + pathPrefix,
+    siteUrl: config.siteUrl + constPathPrefix,
     rssMetadata: {
-      site_url: config.siteUrl + pathPrefix,
-      feed_url: config.siteUrl + pathPrefix + config.siteRss,
+      site_url: config.siteUrl + constPathPrefix,
+      feed_url: config.siteUrl + constPathPrefix + config.siteRss,
       title: config.siteTitle,
       description: config.siteDescription,
-      image_url: `${config.siteUrl + pathPrefix}/logos/logo-512.png`,
+      image_url: `${config.siteUrl + constPathPrefix}/logos/logo-512.png`,
       author: config.siteRssAuthor,
       copyright: `${config.copyright.label} © ${config.copyright.year ||
         new Date().getFullYear()}`
@@ -75,7 +75,7 @@ module.exports = {
         name: config.siteTitle,
         short_name: config.siteTitle,
         description: config.siteDescription,
-        start_url: config.pathPrefix,
+        start_url: constPathPrefix,
         background_color: config.backgroundColor,
         theme_color: config.themeColor,
         display: "minimal-ui",
