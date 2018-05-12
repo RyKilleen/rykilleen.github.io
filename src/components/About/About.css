@@ -1,1 +1,15 @@
 /** empty css file for component consistency **/
+
+.about-page {
+    width: 90%;
+    max-width: 710px;
+    margin: 0 auto;
+}
+
+.about-section {
+    
+}
+
+.about-sub-section {
+
+}

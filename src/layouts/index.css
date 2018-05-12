@@ -303,12 +303,12 @@ h6 {
 }
 
 a {
-    color: #4a4a4a;
+    color: #2fa257;
     transition: color 0.3s ease;
 }
 
 a:hover {
-    color: #111;
+    color: #0d5e2a;
 }
 
 p,
@@ -620,6 +620,7 @@ button {
 .vertical {
     display: table-cell;
     vertical-align: middle;
+    border-bottom: 11px solid #5bdc88;
 }
 
 /* ==========================================================================
