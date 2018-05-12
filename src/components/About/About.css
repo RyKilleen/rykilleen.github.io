@@ -13,3 +13,24 @@
 .about-sub-section {
 
 }
+
+.position-meta {
+    font-size: 2.2rem;
+}
+.about-position {
+    margin-top: 3rem;
+}
+.position-employer {
+    position: relative;
+}
+
+h3.position-employer:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0px;
+    background-color: #5bdc88;
+    height: 4px;
+}
