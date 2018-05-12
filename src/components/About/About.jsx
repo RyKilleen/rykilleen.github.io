@@ -30,13 +30,7 @@ class About extends Component {
           </section>
         </section>
         <hr />
-        <section>
-          <h2>In A Past Life</h2>
-        </section>
-        <hr />
-        <section>
-          <h2>Future?</h2>
-        </section>
+
       </div>
     );
   }
