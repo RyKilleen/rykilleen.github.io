@@ -25,9 +25,6 @@ class About extends Component {
             <h3 className="position-employer">Think Company</h3>
             <h4 className="position-meta"><span className="position-meta-position">Software Developer</span>, <span className="position-meta-date">July 2016 - Present</span></h4>
 
-            
-            <p>I spend my days architecting and maintaining pattern libraries, and working with product teams to integrate those patterns into their products to build useful, efficient user experiences. I make systems easy for other developers use, to make executing designs fast and enjoyable.</p>
-            <p>Though my focus is on the Front End Development, my job also requires me to define middle-tier requirements, implement server-side rendering, discuss and advocate for the user experience, help architect systems that affect the front end, and test.</p>
             <p>The Buzz Words:</p>
             <ul>
               <li>The Essentials: Semantic HTML, CSS, and JS</li>
