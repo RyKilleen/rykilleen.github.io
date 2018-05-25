@@ -9,6 +9,7 @@
     background: #222 no-repeat center center;
     background-size: cover;
     overflow: hidden;
+    border-bottom: 11px solid #5bdc88;
 }
 
 .main-header .inner {

@@ -26,10 +26,6 @@
     box-shadow: #fff 0 0 0 5px;
 }
 
-.post-title a {
-    text-decoration: none;
-}
-
 /* Possibly not the right home for this, make sure to move sized versions as well */
 h1:not(.post-template) .post-title {
     font-size: 3.6rem;

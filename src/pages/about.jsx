@@ -75,6 +75,7 @@ class IndexTemplate extends React.Component {
                 spy
                 smooth
                 duration={500}
+                href="#"
               >
                 <span className="hidden">Scroll Down</span>
               </Link>
